@@ -9,22 +9,16 @@ import Dashboard from './pages/Dashboard.jsx'
 const router = createBrowserRouter([
   {
     path:'/',
-    element:<App/>,
-    children:[
-      {
-        path:'/',
-        element:<Auth/>
-      },
-      {
-        path:'/auth',
-        element:<Auth/>
-      },
-      {
-        path:'/dashboard',
-        element:<Dashboard/>
-      },
-    ]
-  }
+    element:<Auth/>
+  },
+  {
+    path:'/auth',
+    element:<Auth/>
+  },
+  {
+    path:'/dashboard',
+    element:<Dashboard/>
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -28,8 +28,8 @@ export default function Dashboard() {
     <div className="circular-menu">
       {menuItems.map((item, index) => (
         <Link className="menu-item">
-            <span className={`h-24 w-24 md:h-40 md:w-40 absolute rounded-full inset-0 translate-x-1.5 translate-y-1.5 ${item.bgColor} transition-transform group-hover:translate-x-0 group-hover:translate-y-0`}></span>
-            <span title={item.nav} className="h-24 w-24 md:h-40 md:w-40 relative rounded-full flex border-2 border-current px-8 py-3 text-sm font-extrabold md:font-bold uppercase tracking-widest text-black group-active:text-opacity-75 justify-center items-center">
+            <span className={`h-24 w-24 md:h-28 md:w-28 2xl:h-40 2xl:w-40 absolute rounded-full inset-0 translate-x-1.5 translate-y-1.5 ${item.bgColor} transition-transform group-hover:translate-x-0 group-hover:translate-y-0`}></span>
+            <span title={item.nav} className="h-24 w-24 md:h-28 md:w-28 2xl:h-40 2xl:w-40 relative rounded-full flex border-2 border-current px-8 py-3 text-sm font-extrabold md:font-bold uppercase tracking-widest text-black group-active:text-opacity-75 justify-center items-center">
               {
               (item.bgImg) ? 
               <img src={item.bgImg}/> :
