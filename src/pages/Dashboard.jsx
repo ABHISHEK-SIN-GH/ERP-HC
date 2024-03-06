@@ -12,22 +12,22 @@ import DiagnosisImg from "../assets/dashboard/Diagnosis.png";
 
 export default function Dashboard() {
   const menuItems = [
-    { nav: "IPD", bgColor: "bg-gray-100", bgImg: IPDImg },
-    { nav: "Accounts", bgColor: "bg-blue-100", bgImg: AccountsImg },
-    { nav: "Inventory", bgColor: "bg-green-100", bgImg: InventoryImg },
-    { nav: "HRMS", bgColor: "bg-yellow-100", bgImg: HRMSImg },
-    { nav: "POS", bgColor: "bg-red-100", bgImg: POSImg },
-    { nav: "Diagnosis", bgColor: "bg-purple-100", bgImg: DiagnosisImg },
-    { nav: "Front Desk", bgColor: "bg-indigo-100", bgImg: FrontdeskImg },
-    { nav: "Pharmacy", bgColor: "bg-pink-100", bgImg: PharmacyImg },
-    { nav: "OPD", bgColor: "bg-teal-100", bgImg: OPDImg },
-    { nav: "VAYAM ERP", bgColor: "bg-orange-100", bgImg: null },
+    { nav: "IPD", bgColor: "bg-gray-100", bgImg: IPDImg, navLink:'/ipd' },
+    { nav: "Accounts", bgColor: "bg-blue-100", bgImg: AccountsImg, navLink:'/account' },
+    { nav: "Inventory", bgColor: "bg-green-100", bgImg: InventoryImg, navLink:'/inventory' },
+    { nav: "HRMS", bgColor: "bg-yellow-100", bgImg: HRMSImg, navLink:'/hrms' },
+    { nav: "POS", bgColor: "bg-red-100", bgImg: POSImg, navLink:'/pos' },
+    { nav: "Diagnosis", bgColor: "bg-purple-100", bgImg: DiagnosisImg, navLink:'/diagnosis' },
+    { nav: "Front Desk", bgColor: "bg-indigo-100", bgImg: FrontdeskImg, navLink:'/frontdesk' },
+    { nav: "Pharmacy", bgColor: "bg-pink-100", bgImg: PharmacyImg, navLink:'/pharmacy' },
+    { nav: "OPD", bgColor: "bg-teal-100", bgImg: OPDImg, navLink:'/opd'},
+    { nav: "VAYAM ERP", bgColor: "bg-orange-100", bgImg: null, navLink:'/admin-panel'},
   ];
 
   return (
     <div className="circular-menu">
       {menuItems.map((item, index) => (
-        <Link className="menu-item">
+        <Link className="menu-item" to={item.navLink}>
           <span
             className={`
             h-24 w-24 
