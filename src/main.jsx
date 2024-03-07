@@ -17,7 +17,24 @@ import Pharmacy from "./pages/pharmacy/Pharmacy";
 import Panel from './components/Panel.jsx'
 import PatientRegistration from './components/PatientRegistration.jsx'
 import AllPatients from './components/AllPatients.jsx'
+import PrintPage from './components/PrintPage.jsx'
+import CapUp from './components/CapUp.jsx'
+import PatientDetails from './components/PatientDetails.jsx'
+import PatientDetails404 from './components/PatientDetails404.jsx'
+import PatientVitalSigns from './components/PatientVitalSigns.jsx'
+import PatientTreatmentPlan from './components/PatientTreatmentPlan.jsx'
+import PatientCurrentMedications from './components/PatientCurrentMedications.jsx'
+import PatientAppointmentsHistory from './components/PatientAppointmentsHistory.jsx'
+import PatientNotes from './components/PatientNotes.jsx'
 const router = createBrowserRouter([
+  {
+    path:'/cap-up-page',
+    element:<CapUp/>
+  },
+  {
+    path:'/print-page',
+    element:<PrintPage/>
+  },
   {
     path:'/',
     element:<Auth/>
@@ -81,6 +98,36 @@ const router = createBrowserRouter([
       {
         path:'/admin-panel/all-patients',
         element:<AllPatients/>
+      },
+      {
+        path:'/admin-panel/patient-details',
+        element:<PatientDetails/>,
+        children:[
+          {
+            path:'/admin-panel/patient-details',
+            element:<PatientVitalSigns/>
+          },
+          {
+            path:'/admin-panel/patient-details/vital-signs',
+            element:<PatientVitalSigns/>
+          },
+          {
+            path:'/admin-panel/patient-details/treatment-plan',
+            element:<PatientTreatmentPlan/>
+          },
+          {
+            path:'/admin-panel/patient-details/current-medications',
+            element:<PatientCurrentMedications/>
+          },
+          {
+            path:'/admin-panel/patient-details/appointment-history',
+            element:<PatientAppointmentsHistory/>
+          },
+          {
+            path:'/admin-panel/patient-details/notes',
+            element:<PatientNotes/>
+          }
+        ]
       },
     ]
   },

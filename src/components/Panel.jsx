@@ -56,6 +56,7 @@ export default function Panel() {
                         <SideBarLink url={'/dashboard'} name={'Dashboard'} icon={<i class="fa-solid fa-chart-pie"></i>}/>
                         <SideBarLink url={'/admin-panel/registration'} name={'Registration'}  icon={<i class="fa-solid fa-file-signature"></i>}/>
                         <SideBarLink url={'/admin-panel/all-patients'} name={'All Patients'}  icon={<i class="fa-solid fa-users"></i>}/>
+                        <SideBarLink url={'/admin-panel/patient-details'} name={'Patient Details'}  icon={<i class="fa-solid fa-hospital-user"></i>}/>
                     </ul>
                 </div>
             </aside>

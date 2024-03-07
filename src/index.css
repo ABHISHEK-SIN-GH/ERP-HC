@@ -101,5 +101,21 @@
 display: none;
 }
 
+@media print {
+  body {
+    visibility: hidden;
+  }
+  #section-to-print {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
 
+@page {
+  margin: 4px;
+  size: A4;
+}
 
